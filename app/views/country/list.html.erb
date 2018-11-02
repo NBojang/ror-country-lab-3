@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/style.css">
+
+<% if @countrys.blank? %>
+<p>There are no countries in the system.</p>
+<% else %>
+<p>These are the countries in our system</p>
+
+<ul id = "countries">
+   <% @countrys.each do |c| %>
+   <li><%= link_to c.name, {:action => 'show', :id => c.id} -%></li>
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add a new Country", {:action => 'new' }%></p>

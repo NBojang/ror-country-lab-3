@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/style.css">
+<h1>Add new book</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "country_name">Name</label>:
+
+<%= text_field 'countrys', 'name' %></p>
+<p><label for = "country_capital">Capital</label>:
+  <%= text_field 'countrys', 'capital' %></p>
+<%= submit_tag "Create" %>
+<% end -%>
+
+<%= link_to 'Back', {:action => 'list'} %>
